@@ -13,7 +13,7 @@ mongo = PyMongo(app)
 
 output = []
 
-// GET all CONTACTS
+// Get all contact
 @app.route('/pb', methods=['GET'])
 def get_all_data():
    pb = mongo.db.pb
@@ -24,7 +24,7 @@ def get_all_data():
 
     
 
-// SEARCH Contact using Name      
+// Search a contact using Name      
 @app.route('/pb/<Name>',methods=['GET'])
 def get_one_data(Name):
     pb = mongo.db.pb
@@ -40,7 +40,7 @@ def get_one_data(Name):
 
 
 
-// Adding a Contact
+// Adding a contact
 @app.route('/pb',methods=['POST'])
 def add_data():
     pb = mongo.db.pb
@@ -60,7 +60,7 @@ def add_data():
 
 
 
-// DELETE the Contact
+//DELETE a Contact
 @app.route('/pb/<Name>',methods=['DELETE'])
 def data_user(Name):
      pb = mongo.db.pb
